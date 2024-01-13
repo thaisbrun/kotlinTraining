@@ -4,7 +4,7 @@ import java.math.BigInteger
 import java.util.Scanner
 
 fun main(){
-    //calculRiz()
+    calculRiz()
     moyenneNotes()
 }
 
