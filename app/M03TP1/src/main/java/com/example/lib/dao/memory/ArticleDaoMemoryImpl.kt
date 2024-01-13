@@ -19,7 +19,8 @@ class ArticleDaoMemoryImpl : ArticleDAO {
             Article(2, "Ecran", "Ecran sans fil", 1000.0, "", Date()),
             Article(3, "Clavier", "Clavier sans fil", 25.0, "", Date()),
         )
-    }    override fun selectById(id: Long): Article? {
+    }
+    override fun selectById(id: Long): Article? {
 
         return articlesInMemory.find { it.id == id };
     }
