@@ -13,11 +13,13 @@ open class Article(
     var urlImage : String,
     var dateSortie : Date
 ){
+    //Méthode to string
 override fun toString() : String{
     return " Informations de l'article : " + id + " " +
             titre + " " + description + " " + prix + " " + urlImage + " " + dateSortie + ". "
 
-}}
+}
+}
 fun main(){
     var date=LocalDate.parse("14-02-2018", DateTimeFormatter.ofPattern("dd-MM-yyyy"))
     println(ArticleRepository.getArticle(1))

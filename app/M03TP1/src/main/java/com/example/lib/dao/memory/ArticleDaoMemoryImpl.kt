@@ -6,7 +6,7 @@ import java.lang.Long.parseLong
 import java.util.Date
 
 class ArticleDaoMemoryImpl : ArticleDAO {
-
+//ArticleDaoMemory implémente l'interface DAO
     companion object {
         private val articlesInMemory: MutableList<Article> = mutableListOf(
             Article(
