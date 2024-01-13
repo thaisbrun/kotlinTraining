@@ -3,7 +3,7 @@ package com.example.lib.bo
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.Date
-
+import com.example.lib.repository.ArticleRepository
 //Ici on gère les propriétés, les getters et setters et les constructeurs
 open class Article(
     var id : Long,
@@ -20,6 +20,7 @@ override fun toString() : String{
 }}
 fun main(){
     var date=LocalDate.parse("14-02-2018", DateTimeFormatter.ofPattern("dd-MM-yyyy"))
-    val unArticle = Article(1, "test", "fonctionnel", 10.5, "urldelimage", java.sql.Date.valueOf(date))
-    println(unArticle.toString());
+    println(ArticleRepository.getArticle(1))
+    println(ArticleRepository.getArticle(2))
+
 }
