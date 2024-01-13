@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "TPEni"
 include(":app")
- 
+include(":app:M03TP1")
