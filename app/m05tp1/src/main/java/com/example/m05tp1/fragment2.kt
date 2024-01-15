@@ -36,11 +36,10 @@ class fragment2 : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle? ): View? {
         binding = FragmentFragment2Binding.inflate(inflater, container, false)
         binding.btnFrag2.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_fragment1_to_fragment2)
+            Navigation.createNavigateOnClickListener(R.id.action_fragment2_to_fragment4)
         )
         binding.btnFrag2.setOnLongClickListener{
-            Navigation.createNavigateOnClickListener(R.id.action_fragment1_to_fragment3)
-            println("test")
+            Navigation.findNavController(binding.root).navigate(R.id.fragment5)
             return@setOnLongClickListener true
         }
         return binding.root
