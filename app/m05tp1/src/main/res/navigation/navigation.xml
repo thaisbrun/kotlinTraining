@@ -13,15 +13,52 @@
         <action
             android:id="@+id/action_fragment1_to_fragment2"
             app:destination="@id/fragment2" />
+        <action
+            android:id="@+id/action_fragment1_to_fragment3"
+            app:destination="@id/fragment3" />
     </fragment>
     <fragment
         android:id="@+id/fragment2"
         android:name="com.example.m05tp1.fragment2"
         android:label="fragment_fragment2"
-        tools:layout="@layout/fragment_fragment2" />
+        tools:layout="@layout/fragment_fragment2" >
+        <action
+            android:id="@+id/action_fragment2_to_fragment4"
+            app:destination="@id/fragment4" />
+        <action
+            android:id="@+id/action_fragment2_to_fragment5"
+            app:destination="@id/fragment5" />
+    </fragment>
     <fragment
         android:id="@+id/fragment3"
         android:name="com.example.m05tp1.Fragment3"
         android:label="fragment_3"
-        tools:layout="@layout/fragment_3" />
+        tools:layout="@layout/fragment_3" >
+        <action
+            android:id="@+id/action_fragment3_to_fragment6"
+            app:destination="@id/fragment6" />
+        <action
+            android:id="@+id/action_fragment3_to_fragment7"
+            app:destination="@id/fragment7" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment4"
+        android:name="com.example.m05tp1.Fragment4"
+        android:label="fragment_4"
+        tools:layout="@layout/fragment_4" />
+    <fragment
+        android:id="@+id/fragment5"
+        android:name="com.example.m05tp1.Fragment5"
+        android:label="fragment_5"
+        tools:layout="@layout/fragment_5" />
+    <fragment
+        android:id="@+id/fragment6"
+        android:name="com.example.m05tp1.Fragment6"
+        android:label="fragment_6"
+        tools:layout="@layout/fragment_6" />
+    <fragment
+        android:id="@+id/fragment7"
+        android:name="com.example.m05tp1.Fragment7"
+        android:label="fragment_7"
+        tools:layout="@layout/fragment_7" />
 </navigation>

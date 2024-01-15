@@ -1,17 +1,14 @@
 package com.example.m05tp1
 
+import android.R.attr.fragment
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import androidx.databinding.DataBindingUtil
-import androidx.databinding.ViewDataBinding
+import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
-import com.example.m05tp1.databinding.ActivityMainBinding
 import com.example.m05tp1.databinding.FragmentFragment1Binding
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -38,10 +35,14 @@ class fragment1 : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle? ): View? {
-        val binding = DataBindingUtil.inflate<FragmentFragment1Binding>(inflater, R.layout.fragment_fragment1,
-            container, false)
-        binding.btn.setOnClickListener (
-            Navigation.createNavigateOnClickListener(R.id.action_fragment1_to_fragment2))
+        binding = FragmentFragment1Binding.inflate(inflater, container, false)
+       binding.btn.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_fragment1_to_fragment2)
+        )
+        binding.btn.setOnLongClickListener{
+            Navigation.findNavController(binding.root)
+            return@setOnLongClickListener false
+        }
         return binding.root
     }
 
