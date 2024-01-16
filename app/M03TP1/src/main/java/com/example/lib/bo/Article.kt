@@ -24,5 +24,6 @@ fun main(){
     var date=LocalDate.parse("14-02-2018", DateTimeFormatter.ofPattern("dd-MM-yyyy"))
     println(ArticleRepository.getArticle(1))
     println(ArticleRepository.getArticle(2))
+    println(ArticleRepository.allArticles().toString())
 
 }

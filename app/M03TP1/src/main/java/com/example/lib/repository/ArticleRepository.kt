@@ -13,4 +13,7 @@ object ArticleRepository {
     fun addArticle(article: Article) : Long? {
         return articleDAO?.addNewOne(article)
     }
+    fun allArticles(): MutableList<Article>?{
+        return articleDAO?.all()
+    }
 }
